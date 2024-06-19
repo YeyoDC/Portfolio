@@ -11,3 +11,8 @@ with col2:
      and you will see all my applications on here
     """
     st.info(content)
+content2 = """
+Below you can find some of the apps I have built in Python. Feel free to contact me
+"""
+# writing the content outside of the column
+st.write(content2)
