@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas
 
 col1, col2 = st.columns(2)
 
@@ -16,3 +17,12 @@ Below you can find some of the apps I have built in Python. Feel free to contact
 """
 # writing the content outside of the column
 st.write(content2)
+# adding new columns
+col3, col4 = st.columns(2)
+df = pandas.read_csv("data.csv", sep=";")
+with col3:
+    for index, row in df[:10].iterrows():
+        st.header(row["title"])
+with col4:
+    for index, row in df[11:].iterrows():
+        st.header(row["title"])
