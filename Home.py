@@ -35,15 +35,16 @@ with col2:
         with col_socials:
             st.subheader("Follow me")
             # Use st.write with markdown to format LinkedIn and GitHub
+            # LinkedIn with icon and link in the same line
             st.markdown(
-                "<a href='https://www.linkedin.com/in/diego-cuellar24/' target='_blank'><img src='https://github.com/YeyoDC/Portfolio/blob/master/images/github.png' width='40' style='vertical-align: middle;' /></a> "
+                "<a href='https://www.linkedin.com/in/diego-cuellar24/' target='_blank'><img src='https://raw.githubusercontent.com/YeyoDC/Portfolio/master/images/linkedin.png' width='40' style='vertical-align: middle;' /></a> "
                 "<a href='https://www.linkedin.com/in/diego-cuellar24/' target='_blank'>**LinkedIn**</a>",
                 unsafe_allow_html=True
             )
 
-            # GitHub
+            # GitHub with icon and link in the same line
             st.markdown(
-                "<a href='https://github.com/YeyoDC' target='_blank'><img src='images/github.png' width='40' style='vertical-align: middle;' /></a> "
+                "<a href='https://github.com/YeyoDC' target='_blank'><img src='https://raw.githubusercontent.com/YeyoDC/Portfolio/master/images/github.png' width='40' style='vertical-align: middle;' /></a> "
                 "<a href='https://github.com/YeyoDC' target='_blank'>**GitHub**</a>",
                 unsafe_allow_html=True
             )
