@@ -18,15 +18,16 @@ June 2025. I have a strong passion for learning, and I would love to show you so
     """
 
     st.info(content)
-    st.subheader("Contact information: ")
-    colcontact1 , colcontact2, colcontact3 = st.columns([1.5, 0.5, 1.5])
+    st.markdown("<h2 style='text-align: center;'>Contact information</h2>", unsafe_allow_html=True)
+
+    colcontact1 , colcontact3 = st.columns(2)
 
     with colcontact1:
         st.subheader("Diego Cuellar")
         st.write("Phone: 5068970187")
         st.write("Email: diego_cuellar24@hotmail.com")
     with colcontact3:
-        st.write("You can also find me on:")
+        st.subheader("Socials: ")
         # Display the LinkedIn icon as a smaller size
         st.image("images/linkedin.png", width=40)  # Adjust width to your preferred icon size
         st.write("[LinkedIn](https://www.linkedin.com/in/diego-cuellar24/)")
