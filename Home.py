@@ -18,7 +18,7 @@ with col2:
     """
     st.info(content)
 
-    st.markdown("<h2 style='text-align: center;'>Contact Me</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;'>Contact Details</h2>", unsafe_allow_html=True)
 
     # Create a container for both Contact Info and Socials
     with st.container():
