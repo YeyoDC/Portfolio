@@ -36,7 +36,7 @@ with col2:
             st.subheader("Follow me")
             # Use st.write with markdown to format LinkedIn and GitHub
             st.markdown(
-                "<a href='https://www.linkedin.com/in/diego-cuellar24/' target='_blank'><img src='images/linkedin.png' width='40' style='vertical-align: middle;' /></a> "
+                "<a href='https://www.linkedin.com/in/diego-cuellar24/' target='_blank'><img src='https://github.com/YeyoDC/Portfolio/blob/master/images/github.png' width='40' style='vertical-align: middle;' /></a> "
                 "<a href='https://www.linkedin.com/in/diego-cuellar24/' target='_blank'>**LinkedIn**</a>",
                 unsafe_allow_html=True
             )
