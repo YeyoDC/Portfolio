@@ -36,37 +36,21 @@ June 2025. I have a strong passion for learning, and I would love to show you so
         for skill in data_sets.skills[10:]:
             list += "<li>" + skill + "</li>"
         st.html(list)
+st.title("Contact information: ")
+st.subheader("Diego Cuellar")
+st.write("Phone: 5068970187")
+st.write("Email: diego_cuellar24@hotmail.com")
+st.write("You can also find me on:")
+# Display the LinkedIn icon as a smaller size
+col1, col2, col3, col4, col5 = st.columns(5)
 
-st.subheader("Projects:")
-content2 = """
-Below you can find some of my projects from school that I have been working on
-"""
+with col1:
+    st.image("images/linkedin.png", width=40)  # Adjust width to your preferred icon size
+    st.write("[LinkedIn](https://www.linkedin.com/in/diego-cuellar24/)")
+with col2:
+    st.image("images/github.png", width=40)  # Adjust width to your preferred icon size
+    st.write("[github](https://github.com/YeyoDC)")
 
-# writing the content outside of the column
-st.write(content2)
-# adding new columns
-col3, middle_column, col4 = st.columns([1.5, 0.5, 1.5])
-with col3:
-    st.header("To do app")
-    st.write("App that allows you to add activities so you remember, and once done they can be deleted")
-    st.image("images/1.png")
-    st.write("[Source Code](https://github.com/YeyoDC/to-do-WebApp)")
-
-    st.header("Social Media Website")
-    st.write("Social media website, that allows you to post what you think in a fun way")
-    st.image("images/15.png")
-    st.write("[Source Code](https://github.com/YeyoDC/y-socialMedia)")
-
-with col4:
-    st.header("Students Scores")
-    st.write("App that allows you upload students scores, coded in c# using Object-oriented principles")
-    st.image("images/12.png")
-    st.write("[Source Code](https://github.com/YeyoDC/StudentsScore)")
-
-    st.header("Pet Modeling Photograph")
-    st.write("Website dedicated to attract pets to serve as models for different projects like commercials and movies")
-    st.image("images/2.png")
-    st.write("[Source Code](https://github.com/YeyoDC/pet_modeling)")
 
 
 
