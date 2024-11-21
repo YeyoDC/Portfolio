@@ -18,7 +18,7 @@ with col2:
     """
     st.info(content)
 
-    st.markdown("<h2 style='text-align: center;'>Contact information</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;'>Contact Me</h2>", unsafe_allow_html=True)
 
     # Create a container for both Contact Info and Socials
     with st.container():
@@ -27,13 +27,13 @@ with col2:
 
         # Left column: Contact Information
         with col_contact:
-            st.subheader("Contact Information")
+            # st.subheader("Contact Information")
             st.write("Phone: 506-897-0187")
             st.write("Email: diego_cuellar24@hotmail.com")
 
         # Right column: Socials
         with col_socials:
-            st.subheader("Follow me")
+            # st.subheader("Follow me")
             # Use st.write with markdown to format LinkedIn and GitHub
             # LinkedIn with icon and link in the same line
             st.markdown(
