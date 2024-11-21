@@ -53,23 +53,3 @@ with col2:
 
 
 
-
-
-# adding new columns
-# col3, empty_colum, col4 = st.columns([1.5, 0.5, 1.5])
-#
-# # this will set up the file and save content into df variable
-# df = pandas.read_csv("data.csv", sep=";")
-# with col3:
-#     for index, row in df[:10].iterrows():
-#         st.header(row["title"])
-#         st.write(row["description"])
-#         st.image(f"images/{row['image']}")
-#         st.write("[Source Code](https://pythonhow.com)")
-# with col4:
-#     for index, row in df[11:].iterrows():
-#         st.header(row["title"])
-#         st.write(row["description"])
-#         st.image(f"images/{row['image']}")
-#         st.write("[Source Code](https://pythonhow.com)")
-
