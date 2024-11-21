@@ -23,7 +23,7 @@ with col2:
     # Create a container for both Contact Info and Socials
     with st.container():
         # Outer columns for Contact Info and Socials (no nesting columns inside columns)
-        col_contact, col_socials = st.columns(2)
+        col_contact,col_separator,col_socials = st.columns([1.5, 0.5, 1.5])
 
         # Left column: Contact Information
         with col_contact:
