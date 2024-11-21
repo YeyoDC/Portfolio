@@ -38,8 +38,8 @@ with col2:
             st.write("**LinkedIn**: [LinkedIn](https://www.linkedin.com/in/diego-cuellar24/)")
             st.write("**GitHub**: [GitHub](https://github.com/YeyoDC)")
             # Use st.image for the icons
-            # st.image("images/linkedin.png", width=40)
-            # st.image("images/github.png", width=40)
+            st.image("images/linkedin.png", width=40)
+            st.image("images/github.png", width=40)
 
 # IT Skills section
 st.markdown("<h2 style='text-align: center;'>IT skills</h2>", unsafe_allow_html=True)
