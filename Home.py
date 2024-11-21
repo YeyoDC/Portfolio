@@ -35,11 +35,23 @@ with col2:
         with col_socials:
             st.subheader("Follow me")
             # Use st.write with markdown to format LinkedIn and GitHub
-            st.write("**LinkedIn**: [LinkedIn](https://www.linkedin.com/in/diego-cuellar24/)")
-            st.image("images/linkedin.png", width=40)
-            st.write("**GitHub**: [GitHub](https://github.com/YeyoDC)")
-            # Use st.image for the icons
-            st.image("images/github.png", width=40)
+            st.markdown(
+                "<a href='https://www.linkedin.com/in/diego-cuellar24/' target='_blank'><img src='images/linkedin.png' width='40' style='vertical-align: middle;' /></a> "
+                "<a href='https://www.linkedin.com/in/diego-cuellar24/' target='_blank'>**LinkedIn**</a>",
+                unsafe_allow_html=True
+            )
+
+            # GitHub
+            st.markdown(
+                "<a href='https://github.com/YeyoDC' target='_blank'><img src='images/github.png' width='40' style='vertical-align: middle;' /></a> "
+                "<a href='https://github.com/YeyoDC' target='_blank'>**GitHub**</a>",
+                unsafe_allow_html=True
+            )
+            # st.write("**LinkedIn**: [LinkedIn](https://www.linkedin.com/in/diego-cuellar24/)")
+            # st.image("images/linkedin.png", width=40)
+            # st.write("**GitHub**: [GitHub](https://github.com/YeyoDC)")
+            # # Use st.image for the icons
+            # st.image("images/github.png", width=40)
 
 # IT Skills section
 st.markdown("<h2 style='text-align: center;'>IT skills</h2>", unsafe_allow_html=True)
