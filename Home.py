@@ -36,9 +36,9 @@ with col2:
             st.subheader("Follow me")
             # Use st.write with markdown to format LinkedIn and GitHub
             st.write("**LinkedIn**: [LinkedIn](https://www.linkedin.com/in/diego-cuellar24/)")
+            st.image("images/linkedin.png", width=40)
             st.write("**GitHub**: [GitHub](https://github.com/YeyoDC)")
             # Use st.image for the icons
-            st.image("images/linkedin.png", width=40)
             st.image("images/github.png", width=40)
 
 # IT Skills section
