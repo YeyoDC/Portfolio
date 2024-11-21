@@ -56,20 +56,28 @@ with col2:
 
 # IT Skills section
 st.markdown("<h2 style='text-align: center;'>IT skills</h2>", unsafe_allow_html=True)
+# Create 3 columns for layout
+cols = st.columns(3)
 
-# Columns to divide the skills
-skill_col_1, skill_col_2, skill_col_3 = st.columns(3)
-with skill_col_1:
-    skill_list = "".join(f"<li>{skill}</li>" for skill in data_sets.skills[:5])
-    st.markdown(f"<ul>{skill_list}</ul>", unsafe_allow_html=True)
+# Track which column the content goes into
+col_idx = 0
 
-with skill_col_2:
-    skill_list = "".join(f"<li>{skill}</li>" for skill in data_sets.skills[5:10])
-    st.markdown(f"<ul>{skill_list}</ul>", unsafe_allow_html=True)
-
-with skill_col_3:
-    skill_list = "".join(f"<li>{skill}</li>" for skill in data_sets.skills[10:])
-    st.markdown(f"<ul>{skill_list}</ul>", unsafe_allow_html=True)
+# Display grouped skills in columns
+for category, skills_list in data_sets.skills_grouped.items():
+    if isinstance(skills_list, dict):  # If the category has subcategories
+        # Iterate over the subcategories and place them inside the columns
+        with cols[col_idx]:
+            st.subheader(category)
+            for subcategory, subskills in skills_list.items():
+                st.markdown(f"**{subcategory}:**")
+                st.write(", ".join(subskills))
+        col_idx = (col_idx + 1) % 3  # Cycle through columns
+    else:
+        # Directly display category and skills in the columns
+        with cols[col_idx]:
+            st.subheader(category)
+            st.write(", ".join(skills_list))
+        col_idx = (col_idx + 1) % 3  # Cycle through columns
 
 # Projects section
 st.subheader("Projects:")
