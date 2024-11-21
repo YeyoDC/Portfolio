@@ -20,22 +20,26 @@ with col2:
 
     st.markdown("<h2 style='text-align: center;'>Contact information</h2>", unsafe_allow_html=True)
 
-    # Contact information
-    st.subheader("Diego Cuellar")
-    st.write("Phone: 5068970187")
-    st.write("Email: diego_cuellar24@hotmail.com")
+    # Create a container for both Contact Info and Socials
+    with st.container():
+        # Outer columns for Contact Info and Socials (no nesting columns inside columns)
+        col_contact, col_socials = st.columns(2)
 
-    # Socials layout
-    st.subheader("Socials:")
-    colsocials = st.columns(2)
+        # Left column: Contact Information
+        with col_contact:
+            st.subheader("Contact Information")
+            st.write("Phone: 506-897-0187")
+            st.write("Email: diego_cuellar24@hotmail.com")
 
-    with colsocials[0]:
-        st.image("images/linkedin.png", width=40)  # Adjust width to your preferred icon size
-        st.write("[LinkedIn](https://www.linkedin.com/in/diego-cuellar24/)")
-
-    with colsocials[1]:
-        st.image("images/github.png", width=40)  # Adjust width to your preferred icon size
-        st.write("[GitHub](https://github.com/YeyoDC)")
+        # Right column: Socials
+        with col_socials:
+            st.subheader("Socials")
+            # Use st.write with markdown to format LinkedIn and GitHub
+            st.write("**LinkedIn**: [LinkedIn](https://www.linkedin.com/in/diego-cuellar24/)")
+            st.write("**GitHub**: [GitHub](https://github.com/YeyoDC)")
+            # Use st.image for the icons
+            st.image("images/linkedin.png", width=40)
+            st.image("images/github.png", width=40)
 
 # IT Skills section
 st.markdown("<h2 style='text-align: center;'>IT skills</h2>", unsafe_allow_html=True)
