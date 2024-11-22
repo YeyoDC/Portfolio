@@ -87,7 +87,8 @@ for category, skills_list in data_sets.skills_grouped.items():
 # Projects section
 st.markdown(styled_title("Projects", color="deepskyblue", htmltag="h2", alignment="center"), unsafe_allow_html=True)
 project_info = """
-Here are some of the projects I have completed at NBCC, make sure you come by regularly as I might have new interesting projects
+Here are some of the projects I have completed at NBCC, which showcases some of the skills I have adquired during the program. 
+Make sure you come by regularly as I might have new interesting projects
 """
 st.info(project_info)
 
@@ -97,21 +98,25 @@ col3,col_sep, col4 = st.columns([1.5, 0.5, 1.5])
 with col3:
     st.markdown(styled_title("To do app", color="lightblue", htmltag="h2"), unsafe_allow_html=True)
     st.write("App that allows you to add activities so you remember, and once done they can be deleted")
+    st.write("Tools: Python, Streamlit")
     st.image("images/1.png", width=250)
     st.write("[Source Code](https://github.com/YeyoDC/to-do-WebApp)")
 
     st.markdown(styled_title("Social Media Website", color="lightblue", htmltag="h2"), unsafe_allow_html=True)
     st.write("Social media website that allows you to post what you think in a fun way")
+    st.write("Tools: PHP, MySQL, HTML, CSS, Boostrap")
     st.image("images/15.png", width=250)
     st.write("[Source Code](https://github.com/YeyoDC/y-socialMedia)")
 
 with col4:
     st.markdown(styled_title("Students Scores", color="lightblue", htmltag="h2"), unsafe_allow_html=True)
-    st.write("App that allows you upload students scores, coded in C# using Object-oriented principles")
+    st.write("App that allows you upload students scores into a list. This uses Object-oriented programming principles")
+    st.write("Tools: C#")
     st.image("images/12.png", width=250)
     st.write("[Source Code](https://github.com/YeyoDC/StudentsScore)")
 
     st.markdown(styled_title("Pet Modeling Photograph", color="lightblue", htmltag="h2"), unsafe_allow_html=True)
     st.write("Website dedicated to attract pets to serve as models for different projects like commercials and movies")
+    st.write("Tools: HTML, CSS")
     st.image("images/2.png", width=250)
     st.write("[Source Code](https://github.com/YeyoDC/pet_modeling)")
