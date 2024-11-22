@@ -1,6 +1,8 @@
 import streamlit as st
 import data_sets
-
+# Function to display category titles with colors
+def styled_title(title, color="skyblue", htmltag ="h3", alignment=""):
+    return f"<{htmltag}  style='color:{color}; text-align:{alignment};'>{title}</{htmltag}>"
 st.set_page_config(layout="wide")
 
 # Main layout with two columns for image and about info
@@ -10,15 +12,17 @@ with col1:
     st.image("images/DiegoPhoto.jpg")
 
 with col2:
-    st.markdown("<h1 style='text-align: center;'>Diego Cuellar</h1>", unsafe_allow_html=True)
-    st.markdown("<h2 style='text-align: center;'>About me</h2>", unsafe_allow_html=True)
+    st.markdown(styled_title("Diego Cuellar", color="azure", htmltag="h1", alignment="center"), unsafe_allow_html=True)
+    st.markdown(styled_title("About me", color="deepskyblue", htmltag="h2", alignment="center"), unsafe_allow_html=True)
+
     content = """
     Currently a full-time student at NBCC in the Programmer-Analyst program, expected to graduate in 
     June 2025. I have a strong passion for learning, and I would love to show you some of my skills.
     """
     st.info(content)
 
-    st.markdown("<h2 style='text-align: center;'>Contact Details</h2>", unsafe_allow_html=True)
+    st.markdown(styled_title("Contact Details", color="deepskyblue", htmltag="h2", alignment="center"), unsafe_allow_html=True)
+
 
     # Create a container for both Contact Info and Socials
     with st.container():
@@ -55,19 +59,20 @@ with col2:
             # st.image("images/github.png", width=40)
 
 # IT Skills section
-st.markdown("<h2 style='text-align: center;'>IT skills</h2>", unsafe_allow_html=True)
+st.markdown(styled_title("IT Skills", color="deepskyblue", htmltag="h2", alignment="center"), unsafe_allow_html=True)
 # Create 3 columns for layout
-cols = st.columns(3)
+cols = st.columns([1.4, 1, 1])
 
 # Track which column the content goes into
 col_idx = 0
 
-# Display grouped skills in columns
+
+
+# Display grouped skills in columns with colored titles
 for category, skills_list in data_sets.skills_grouped.items():
     if isinstance(skills_list, dict):  # If the category has subcategories
-        # Iterate over the subcategories and place them inside the columns
         with cols[col_idx]:
-            st.subheader(category)
+            st.markdown(styled_title(category, color="lightcyan"), unsafe_allow_html=True)
             for subcategory, subskills in skills_list.items():
                 st.markdown(f"**{subcategory}:**")
                 st.write(", ".join(subskills))
@@ -75,37 +80,38 @@ for category, skills_list in data_sets.skills_grouped.items():
     else:
         # Directly display category and skills in the columns
         with cols[col_idx]:
-            st.subheader(category)
+            st.markdown(styled_title(category, color="lightblue"), unsafe_allow_html=True)
             st.write(", ".join(skills_list))
         col_idx = (col_idx + 1) % 3  # Cycle through columns
 
 # Projects section
-st.subheader("Projects:")
-st.write("""
-Below you can find some of my projects from school that I have been working on:
-""")
+st.markdown(styled_title("Projects", color="deepskyblue", htmltag="h2", alignment="center"), unsafe_allow_html=True)
+project_info = """
+Here are some of the projects I have completed at NBCC, make sure you come by regularly as I might have new interesting projects
+"""
+st.info(project_info)
 
 # Projects layout with two main columns
-col3, col4 = st.columns(2)
+col3,col_sep, col4 = st.columns([1.5, 0.5, 1.5])
 
 with col3:
-    st.header("To do app")
+    st.markdown(styled_title("To do app", color="lightblue", htmltag="h2"), unsafe_allow_html=True)
     st.write("App that allows you to add activities so you remember, and once done they can be deleted")
-    st.image("images/1.png")
+    st.image("images/1.png", width=250)
     st.write("[Source Code](https://github.com/YeyoDC/to-do-WebApp)")
 
-    st.header("Social Media Website")
+    st.markdown(styled_title("Social Media Website", color="lightblue", htmltag="h2"), unsafe_allow_html=True)
     st.write("Social media website that allows you to post what you think in a fun way")
-    st.image("images/15.png")
+    st.image("images/15.png", width=250)
     st.write("[Source Code](https://github.com/YeyoDC/y-socialMedia)")
 
 with col4:
-    st.header("Students Scores")
+    st.markdown(styled_title("Students Scores", color="lightblue", htmltag="h2"), unsafe_allow_html=True)
     st.write("App that allows you upload students scores, coded in C# using Object-oriented principles")
-    st.image("images/12.png")
+    st.image("images/12.png", width=250)
     st.write("[Source Code](https://github.com/YeyoDC/StudentsScore)")
 
-    st.header("Pet Modeling Photograph")
+    st.markdown(styled_title("Pet Modeling Photograph", color="lightblue", htmltag="h2"), unsafe_allow_html=True)
     st.write("Website dedicated to attract pets to serve as models for different projects like commercials and movies")
-    st.image("images/2.png")
+    st.image("images/2.png", width=250)
     st.write("[Source Code](https://github.com/YeyoDC/pet_modeling)")
